@@ -1,0 +1,22 @@
+[
+    {
+        "name": "regular",
+        "path": "./data/regular.json",
+        "password_protected": false
+    },
+    {
+        "name": "securenotebook",
+        "path": "./data/securenotebook.json",
+        "password_protected": true
+    },
+    {
+        "name": "healthCare",
+        "path": "./data/healthCare.json",
+        "password_protected": false
+    },
+    {
+        "name": "secure2",
+        "path": "./data/secure2.json",
+        "password_protected": true
+    }
+]

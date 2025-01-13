@@ -15,6 +15,6 @@ class CustomCalendarWidget(QCalendarWidget):
         '''
         today = QDate.currentDate()
         days_to_next_saturday = (6 - today.dayOfWeek())%7
-        print('Days to next saturday ', days_to_next_saturday)
+        # print('Days to next saturday ', days_to_next_saturday)
         next_saturday = today.addDays(days_to_next_saturday)
         self.setSelectedDate(next_saturday)

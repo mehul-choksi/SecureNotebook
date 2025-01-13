@@ -5,11 +5,14 @@ from src.components.PasswordInputDialog import PasswordInputDialog
 from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.QtCore import QDate
 
+from src.NotebookManager import NotebookManager
+from src.storage.file_storage import FileStorage
 
 class Main():
     def __init__(self):
         super().__init__()
-        
+
+'''        
 if __name__ == "__main__":
     app = QApplication([])
 
@@ -32,3 +35,13 @@ if __name__ == "__main__":
     
     else:
         print("Dialog canceled")
+'''
+
+if __name__ == "__main__":
+    app = QApplication([])
+
+    storage = FileStorage() # File path will be set later
+    notebook_manager = NotebookManager(storage)
+    notebook_manager.show()
+
+    sys.exit(app.exec())

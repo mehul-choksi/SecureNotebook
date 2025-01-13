@@ -13,12 +13,13 @@ from markdown_it import MarkdownIt
 import html2text
 
 class MainWindow(QMainWindow):
-    def __init__(self, password):
+    def __init__(self, file_storage):
         super().__init__()
         
         # Initialize file storage object
-        self.password = password
-        self.file_storage = FileStorage()
+        # self.password = password
+        self.file_storage = file_storage
+        self.password = file_storage.passphrase
         self.file_storage.initialize(self.password)
         self.file_storage.readFromFile()
 
@@ -160,7 +161,7 @@ class MainWindow(QMainWindow):
             
 
     def closeEvent(self, event):
-        print('Close event called')
+        # print('Close event called')
         if self.editsMade:
             self.hard_save()
         super().closeEvent(event)
